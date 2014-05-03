@@ -2033,6 +2033,7 @@ void kthread_bind(struct task_struct *p, unsigned int cpu)
 	spin_unlock_irqrestore(&rq->lock, flags);
 }
 EXPORT_SYMBOL(kthread_bind);
+EXPORT_SYMBOL(nr_running);
 
 #ifdef CONFIG_SMP
 /*
