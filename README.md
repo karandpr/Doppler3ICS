@@ -1,4 +1,4 @@
-LuPuS-.PRO-ARC-S-STOCK
+Doppler
 ======================
 
-Pro &amp; Arc/S .587 kernel sources from sony
+for Mango-Smutron-Coconut
