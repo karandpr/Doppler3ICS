@@ -179,19 +179,19 @@
 #define MSM_RAM_CONSOLE_SIZE    (128 * SZ_1K)
 #endif
 
-#define MSM_PMEM_SF_SIZE	0x1E00000
+#define MSM_PMEM_SF_SIZE	0x1B00000
 #ifdef CONFIG_FB_MSM_HDMI_SII9024A_PANEL
 #define MSM_FB_SIZE             0x530000
 #else
-#define MSM_FB_SIZE		0x500000
+#define MSM_FB_SIZE		0x200000
 #endif /* CONFIG_FB_MSM_HDMI_SII9024A_PANEL */
 #define MSM_GPU_PHYS_SIZE       SZ_4M
 /* Old values
 #define MSM_PMEM_CAMERA_SIZE    0x2D00000
 #define MSM_PMEM_ADSP_SIZE      0xA00000 */
 // 720p -- free 15mb ram
-#define MSM_PMEM_CAMERA_SIZE    0x2B00000
-#define MSM_PMEM_ADSP_SIZE      0x900000
+#define MSM_PMEM_CAMERA_SIZE    0x0
+#define MSM_PMEM_ADSP_SIZE      0x1BC6000
 #define PMEM_KERNEL_EBI1_SIZE   0x600000
 
 #define PMIC_GPIO_INT		27
@@ -3327,7 +3327,7 @@ static struct android_pmem_platform_data android_pmem_kernel_ebi1_pdata = {
 static struct android_pmem_platform_data android_pmem_adsp_pdata = {
 	.name = "pmem_adsp",
 	.allocator_type = PMEM_ALLOCATORTYPE_BITMAP,
-	.cached = 0,
+	.cached = 1,
 };
 
 static struct android_pmem_platform_data android_pmem_camera_pdata = {
